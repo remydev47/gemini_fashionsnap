@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
+import 'package:stylesnap/api_keys.dart';
 import 'package:stylesnap/src/presentation/views/home_view.dart';
 import 'package:stylesnap/src/utils/constants.dart';
 
 void main() {
+  Gemini.init(apiKey: ApiKeys.gemini_api_key);
   runApp(const MyApp());
 }
 
