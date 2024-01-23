@@ -15,7 +15,7 @@ class ImageUploadScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _imageFile != null
-        ? Image.file(_imageFile, fit: BoxFit.cover)
+        ? Image.file(_imageFile!, fit: BoxFit.cover)
         : Padding(
             padding: EdgeInsets.all(20.0)
                 .copyWith(bottom: MediaQuery.of(context).size.height * 0.2),
@@ -25,7 +25,7 @@ class ImageUploadScreenWidget extends StatelessWidget {
                 IconButton(
                     onPressed: _onPressed,
                     icon: const Icon(CupertinoIcons.camera)),
-                Text("Upload a picture (full body for best results",
+                Text("Upload a picture full body for best results",
                     style: Theme.of(context).textTheme.bodySmall),
               ],
             ),

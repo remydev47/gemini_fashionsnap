@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:stylesnap/api_keys.dart';
 import 'package:stylesnap/src/presentation/views/home_view.dart';
-import 'package:stylesnap/src/utils/constants.dart';
+import 'package:stylesnap/src/utils/app_theme.dart';
 
 void main() {
   Gemini.init(apiKey: ApiKeys.gemini_api_key);
@@ -17,13 +17,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: kPlatinumWhite,
-        ),
-        useMaterial3: true,
-      ),
+      title: 'Fashion Snap',
+      theme: AppTheme.theme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.light,
       home: HomeView(),
     );
   }

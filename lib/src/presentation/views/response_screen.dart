@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:stylesnap/src/utils/constants.dart';
 
 class ResponseScreen extends StatelessWidget {
@@ -10,12 +9,12 @@ class ResponseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         extendBodyBehindAppBar: true,
-        backgroundColor: kWhite,
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: kSilverGray.withOpacity(0.8),
+          backgroundColor: kSilverGray,
           centerTitle: false,
           title: const Text(
-            "STYLEsnap",
+            "Fashion snap",
           ),
         ),
         body: SingleChildScrollView(
@@ -24,7 +23,13 @@ class ResponseScreen extends StatelessWidget {
               horizontal: 12.0,
             ).copyWith(top: MediaQuery.of(context).size.height * 0.13),
             child: ListTile(
-              title: Text(response),
+              title: Text(
+                response,
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  color: Colors.grey,
+                ),
+              ),
             ),
           ),
         ));
